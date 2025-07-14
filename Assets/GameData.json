@@ -1,0 +1,46 @@
+{
+    "money": 0,
+    "battlePassPurchased": false,
+    "isOfferPackPurchased": false,
+    "playerName": "SussyBaka",
+    "playerLevel": 0,
+    "experience": 0.0,
+    "pity": 0,
+    "bgmVolume": 1.0,
+    "sfxVolume": 1.0,
+    "masterVolume": 1.0,
+    "currentCharacter": {
+        "name": "Quandle",
+        "index": 4,
+        "level": 1,
+        "health": 100,
+        "attackPower": 20,
+        "attackTimer": 1,
+        "speed": 20,
+        "isHumanoid": true,
+        "modelScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "modelPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "isUnlocked": true,
+        "characterModel": {
+            "instanceID": 52984
+        },
+        "avatar": {
+            "instanceID": 40546
+        },
+        "musicGenre": "trap",
+        "characterIcon": {
+            "instanceID": 52890
+        }
+    },
+    "itemList": [],
+    "inventory": [],
+    "charactersInventory": []
+}
