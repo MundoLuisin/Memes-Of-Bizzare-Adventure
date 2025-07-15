@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyItemsPack1
         m_Mode: 1
@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectForYouBanner2
         m_Mode: 1
@@ -3663,7 +3663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack5Coins
         m_Mode: 1
@@ -5667,7 +5667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack7
         m_Mode: 1
@@ -5801,7 +5801,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: Roll10
         m_Mode: 1
@@ -6220,7 +6220,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectQuandle
         m_Mode: 1
@@ -6352,7 +6352,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack3Coins
         m_Mode: 1
@@ -7230,7 +7230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectCharacters
         m_Mode: 1
@@ -7527,7 +7527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectTungTungTungSahur
         m_Mode: 1
@@ -9806,7 +9806,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack6
         m_Mode: 1
@@ -10325,7 +10325,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack4
         m_Mode: 1
@@ -11907,7 +11907,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: Roll1
         m_Mode: 1
@@ -13765,7 +13765,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack2Coins
         m_Mode: 1
@@ -14432,7 +14432,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack6Coins
         m_Mode: 1
@@ -14730,7 +14730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectForYou
         m_Mode: 1
@@ -15030,7 +15030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack2
         m_Mode: 1
@@ -15268,7 +15268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack3
         m_Mode: 1
@@ -15899,7 +15899,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyOfferPack
         m_Mode: 1
@@ -17921,7 +17921,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack1Coins
         m_Mode: 1
@@ -18478,7 +18478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterOptions
         m_Mode: 1
@@ -19129,7 +19129,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterBattlePass
         m_Mode: 1
@@ -19769,7 +19769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyItemsPack2
         m_Mode: 1
@@ -20129,7 +20129,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectItems
         m_Mode: 1
@@ -20495,7 +20495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyBattlePass
         m_Mode: 1
@@ -22060,7 +22060,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack1
         m_Mode: 1
@@ -22429,7 +22429,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack2
         m_Mode: 1
@@ -23397,7 +23397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyPack4Coins
         m_Mode: 1
@@ -24606,7 +24606,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack4
         m_Mode: 1
@@ -25396,7 +25396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: AccountMenu
         m_Mode: 1
@@ -25603,7 +25603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack3
         m_Mode: 1
@@ -26067,7 +26067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectSkills
         m_Mode: 1
@@ -27012,7 +27012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack6
         m_Mode: 1
@@ -27234,7 +27234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectForYouBanner3
         m_Mode: 1
@@ -27366,7 +27366,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack1
         m_Mode: 1
@@ -29922,7 +29922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterChangeName
         m_Mode: 1
@@ -30266,7 +30266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: KeybindsMenu
         m_Mode: 1
@@ -30399,7 +30399,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ProfileMenu
         m_Mode: 1
@@ -30879,7 +30879,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: OnClick_SelectImage
         m_Mode: 1
@@ -31243,7 +31243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ApplyChangeNameAndExit
         m_Mode: 1
@@ -33564,7 +33564,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectDonPollo
         m_Mode: 1
@@ -33987,7 +33987,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuySkillPack5
         m_Mode: 1
@@ -34466,7 +34466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectStonksMan
         m_Mode: 1
@@ -34599,7 +34599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ExitRollPanel
         m_Mode: 1
@@ -34807,7 +34807,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectCoins
         m_Mode: 1
@@ -35431,7 +35431,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: InfoMenu
         m_Mode: 1
@@ -36072,7 +36072,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: Wipedata
         m_Mode: 1
@@ -38771,7 +38771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectForYouBanner1
         m_Mode: 1
@@ -39191,7 +39191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -39323,7 +39323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectOffers
         m_Mode: 1
@@ -39903,7 +39903,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SelectAE86
         m_Mode: 1
@@ -40323,7 +40323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterCharacters
         m_Mode: 1
@@ -40667,7 +40667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: BuyCharacterPack5
         m_Mode: 1
@@ -41102,7 +41102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ManualSaveData
         m_Mode: 1
@@ -41235,7 +41235,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterShop
         m_Mode: 1
@@ -41962,7 +41962,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterHome
         m_Mode: 1
@@ -42437,296 +42437,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012176000}
   m_CullTransparentMesh: 1
---- !u!1 &2015384932
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2015384934}
-  - component: {fileID: 2015384933}
-  - component: {fileID: 2015384936}
-  - component: {fileID: 2015384935}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2015384933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015384932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec73446c6aef2f441abab49044221596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyTxt: {fileID: 1235544804}
-  homeCanvas: {fileID: 597379289}
-  charactersCanvas: {fileID: 1144689481}
-  gachaCanvas: {fileID: 455239917}
-  battlePassCanvas: {fileID: 1031875711}
-  shopCanvas: {fileID: 1193587135}
-  optionsCanvas: {fileID: 5921610631237669238}
-  audioSource: {fileID: 13281137}
-  clickSound: {fileID: 8300000, guid: 88b16ea253a38aa4c9fc8bdd29313ca4, type: 3}
-  purchaseSound: {fileID: 8300000, guid: e1ba8cee500e1da438f2c186a106e026, type: 3}
-  noMoneySound: {fileID: 8300000, guid: 2051df3e35c8e1b48880ccda1042f3fc, type: 3}
-  normalCursor: {fileID: 2800000, guid: 7fd5d39ffac296548830f1ccb707ed08, type: 3}
-  pointerCursor: {fileID: 2800000, guid: f6396097134837c48be15c78dc4a7d26, type: 3}
-  playerLevelTxt: {fileID: 185529443}
-  profileImageHome: {fileID: 1871221705}
-  playerHomeNameText: {fileID: 1625073315}
-  characterPrefab:
-  - {fileID: 1895225255311034577, guid: 411979effb29838418b55e3e571abfc3, type: 3}
-  - {fileID: 2180491654206772200, guid: 328ab72f96c7e424f8bd19c6fbfa1678, type: 3}
-  - {fileID: 7329925876861113520, guid: df11d2cbdc1bec34fa97bb003c0640bc, type: 3}
-  - {fileID: 5160521214381875675, guid: 79f7a884bcb67af4cb8b10c00f6aa96b, type: 3}
-  - {fileID: 3265055336010938436, guid: 6aa5c099e64747940a355fd515441968, type: 3}
-  characterAvatarMask:
-  - {fileID: 9000000, guid: c9996c4bc752bd04589e7a6d5207f5cf, type: 2}
-  - {fileID: 9000000, guid: ab8fbb7b164f8b942860c438fc506e9a, type: 2}
-  - {fileID: 9000000, guid: 5c7e15ee241245e478cf97fb4e411afc, type: 2}
-  - {fileID: 9000000, guid: 5c7e15ee241245e478cf97fb4e411afc, type: 2}
-  - {fileID: 9000000, guid: bfd591ad999c0674b90ee17c4889080e, type: 2}
-  characterHomePrefab: {fileID: 5741475169043971926}
-  characterAnimatorObject: {fileID: 1031778487}
-  transitionAnimator: {fileID: 3291627183201809807}
-  charactersImages:
-  - {fileID: 21300000, guid: 2936449df0671b84188678ed90021322, type: 3}
-  - {fileID: 21300000, guid: b0372cca683b0a045862b1b4904e9c78, type: 3}
-  - {fileID: 21300000, guid: e17987e458d359b4d9a81ee7c4a11f84, type: 3}
-  - {fileID: 21300000, guid: 468c1d4549ad37c4ab1cbb2453c1687f, type: 3}
-  - {fileID: 21300000, guid: 2125a99674eb7874d9a73ec3d24d7aca, type: 3}
-  characterImage: {fileID: 15086244}
-  characterNameTxt: {fileID: 246128079}
-  characterLevelTxt: {fileID: 521044622}
-  characterHealthTxt: {fileID: 1319317783}
-  characterAttackPowerTxt: {fileID: 1323116800}
-  characterAttackTimerTxt: {fileID: 640701889}
-  characterSpeedTxt: {fileID: 271329544}
-  characterMusicGenreTxt: {fileID: 1968821163}
-  shopOffersPanel: {fileID: 640698026}
-  shopForYouPanel: {fileID: 883259253}
-  shopSkillsPanel: {fileID: 1538306476}
-  shopItemsPanel: {fileID: 456601416}
-  shopCharactersPanel: {fileID: 653971137}
-  shopBattlePassPanel: {fileID: 1586661790}
-  shopCoinsPanel: {fileID: 1259050200}
-  purchasedOfferImage: {fileID: 21300000, guid: ee01ee15967da4447ac85720e84d7a19, type: 3}
-  OfferImage: {fileID: 827393903}
-  inventoryManager: {fileID: 2015384936}
-  rollPanel: {fileID: 1101024202}
-  slots:
-  - {fileID: 1485943163}
-  - {fileID: 290890898}
-  - {fileID: 673996181}
-  - {fileID: 23267706}
-  - {fileID: 1808025946}
-  - {fileID: 1811564333}
-  - {fileID: 3488369}
-  - {fileID: 818626776}
-  - {fileID: 1016567093}
-  - {fileID: 766034307}
-  slotSpriteBackground:
-  - {fileID: 6558138, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
-  - {fileID: 1859360189, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
-  - {fileID: -1911284510, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
-  slotImageObj:
-  - {fileID: 1445738242}
-  - {fileID: 42200642}
-  - {fileID: 393291692}
-  - {fileID: 1362072893}
-  - {fileID: 1168259894}
-  - {fileID: 965053527}
-  - {fileID: 110628889}
-  - {fileID: 501301013}
-  - {fileID: 1753385791}
-  - {fileID: 2072506184}
-  slotImageBackground:
-  - {fileID: 551120171}
-  - {fileID: 2068567968}
-  - {fileID: 1627012543}
-  - {fileID: 505278724}
-  - {fileID: 1017965747}
-  - {fileID: 1909284085}
-  - {fileID: 506201787}
-  - {fileID: 1897554224}
-  - {fileID: 872401532}
-  - {fileID: 1270122313}
-  slotText:
-  - {fileID: 17640474}
-  - {fileID: 1927192605}
-  - {fileID: 464573757}
-  - {fileID: 1071762639}
-  - {fileID: 1337430759}
-  - {fileID: 1070254506}
-  - {fileID: 2003465204}
-  - {fileID: 217024818}
-  - {fileID: 1078335870}
-  - {fileID: 927986936}
-  settingsMenu: {fileID: 1222737036321507499}
-  profileMenu: {fileID: 681693754}
-  keybindsMenu: {fileID: 1701146157}
-  accountMenu: {fileID: 1616154300}
-  infoMenu: {fileID: 1130776828}
-  playerNameText: {fileID: 900247001}
-  playerUserText: {fileID: 1607504039}
-  playerLevelOptionsTxt: {fileID: 711968139}
-  changeNameInputField: {fileID: 1715630546}
-  changeNameUIgroup: {fileID: 37626160}
-  profileImage: {fileID: 1481157773}
-  defaultProfileImage: {fileID: 2800000, guid: 87f3fd00cea33204aafdcaa62b06e79b, type: 3}
-  audioMixer: {fileID: 24100000, guid: 71185d94cc6966742b0e625d9ce4026e, type: 2}
-  bgmSlider: {fileID: 1624117477661571208}
-  sfxSlider: {fileID: 3767057897902862878}
-  masterSlider: {fileID: 8986696132561514252}
---- !u!4 &2015384934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015384932}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &2015384935
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015384932}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -1545209562978002980, guid: 71185d94cc6966742b0e625d9ce4026e, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c6a5a7f0f9fa88847bf2758961b3959c, type: 3}
-  m_Resource: {fileID: 8300000, guid: c6a5a7f0f9fa88847bf2758961b3959c, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &2015384936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015384932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38cbd699b973a447a6d6970e1688104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpriteSkills:
-  - {fileID: 21300000, guid: 15bf37758209faf408691352e481dfad, type: 3}
-  - {fileID: 21300000, guid: 0665cce72b88ac2438c05af359a10040, type: 3}
-  - {fileID: 21300000, guid: 6276747286642ca4eb6770afacb38315, type: 3}
-  - {fileID: 21300000, guid: 71d92f7a8d7eae74093783f2f4ed9c54, type: 3}
-  - {fileID: 21300000, guid: 9e4c00176a2cf29479448ca9c0e1451c, type: 3}
-  - {fileID: 21300000, guid: 68bc85f9aa8ff694990585d9923f1535, type: 3}
-  - {fileID: 21300000, guid: 2b90236554e6f0b49b920c1b4576ea99, type: 3}
-  - {fileID: 21300000, guid: 0ee4b68b06658eb42b2cf30329f4bc88, type: 3}
-  - {fileID: 141059688, guid: 0f1f6cdc9a4608d4d9a4c7de46377cad, type: 3}
-  - {fileID: 21300000, guid: a76cc638cc9e7fe4f9b721f3c8dda533, type: 3}
-  objectSpriteUpgradeItem:
-  - {fileID: 21300000, guid: 4dff13dc7f630a54aa5c56c77fc9f7fb, type: 3}
-  - {fileID: 21300000, guid: f08d81a4c7fabad45a2641c8a0c9afdc, type: 3}
-  player: {fileID: 0}
 --- !u!1 &2016251898
 GameObject:
   m_ObjectHideFlags: 0
@@ -42810,7 +42520,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: SettingsMenu
         m_Mode: 1
@@ -43155,7 +42865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: EnterGacha
         m_Mode: 1
@@ -44240,7 +43950,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: ShopSelectBattlePass
         m_Mode: 1
@@ -45073,6 +44783,103 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &168641561496540743
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969408975997298024}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1545209562978002980, guid: 71185d94cc6966742b0e625d9ce4026e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: c6a5a7f0f9fa88847bf2758961b3959c, type: 3}
+  m_Resource: {fileID: 8300000, guid: c6a5a7f0f9fa88847bf2758961b3959c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &172343149833446141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46217,6 +46024,138 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1620490663131218087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969408975997298024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec73446c6aef2f441abab49044221596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyTxt: {fileID: 1235544804}
+  homeCanvas: {fileID: 597379289}
+  charactersCanvas: {fileID: 1144689481}
+  gachaCanvas: {fileID: 455239917}
+  battlePassCanvas: {fileID: 1031875711}
+  shopCanvas: {fileID: 1193587135}
+  optionsCanvas: {fileID: 5921610631237669238}
+  audioSource: {fileID: 13281137}
+  clickSound: {fileID: 8300000, guid: 88b16ea253a38aa4c9fc8bdd29313ca4, type: 3}
+  purchaseSound: {fileID: 8300000, guid: e1ba8cee500e1da438f2c186a106e026, type: 3}
+  noMoneySound: {fileID: 8300000, guid: 2051df3e35c8e1b48880ccda1042f3fc, type: 3}
+  normalCursor: {fileID: 2800000, guid: 7fd5d39ffac296548830f1ccb707ed08, type: 3}
+  pointerCursor: {fileID: 2800000, guid: f6396097134837c48be15c78dc4a7d26, type: 3}
+  playerLevelTxt: {fileID: 185529443}
+  profileImageHome: {fileID: 1871221705}
+  playerHomeNameText: {fileID: 1625073315}
+  characterPrefab:
+  - {fileID: 1895225255311034577, guid: 411979effb29838418b55e3e571abfc3, type: 3}
+  - {fileID: 2180491654206772200, guid: 328ab72f96c7e424f8bd19c6fbfa1678, type: 3}
+  - {fileID: 7329925876861113520, guid: df11d2cbdc1bec34fa97bb003c0640bc, type: 3}
+  - {fileID: 5160521214381875675, guid: 79f7a884bcb67af4cb8b10c00f6aa96b, type: 3}
+  - {fileID: 3265055336010938436, guid: 6aa5c099e64747940a355fd515441968, type: 3}
+  characterAvatarMask:
+  - {fileID: 9000000, guid: c9996c4bc752bd04589e7a6d5207f5cf, type: 2}
+  - {fileID: 9000000, guid: ab8fbb7b164f8b942860c438fc506e9a, type: 2}
+  - {fileID: 9000000, guid: 5c7e15ee241245e478cf97fb4e411afc, type: 2}
+  - {fileID: 9000000, guid: 5c7e15ee241245e478cf97fb4e411afc, type: 2}
+  - {fileID: 9000000, guid: bfd591ad999c0674b90ee17c4889080e, type: 2}
+  characterHomePrefab: {fileID: 5741475169043971926}
+  characterAnimatorObject: {fileID: 1031778487}
+  transitionAnimator: {fileID: 3291627183201809807}
+  charactersImages:
+  - {fileID: 21300000, guid: 2936449df0671b84188678ed90021322, type: 3}
+  - {fileID: 21300000, guid: b0372cca683b0a045862b1b4904e9c78, type: 3}
+  - {fileID: 21300000, guid: e17987e458d359b4d9a81ee7c4a11f84, type: 3}
+  - {fileID: 21300000, guid: 468c1d4549ad37c4ab1cbb2453c1687f, type: 3}
+  - {fileID: 21300000, guid: 2125a99674eb7874d9a73ec3d24d7aca, type: 3}
+  characterImage: {fileID: 15086244}
+  characterNameTxt: {fileID: 246128079}
+  characterLevelTxt: {fileID: 521044622}
+  characterHealthTxt: {fileID: 1319317783}
+  characterAttackPowerTxt: {fileID: 1323116800}
+  characterAttackTimerTxt: {fileID: 640701889}
+  characterSpeedTxt: {fileID: 271329544}
+  characterMusicGenreTxt: {fileID: 1968821163}
+  shopOffersPanel: {fileID: 640698026}
+  shopForYouPanel: {fileID: 883259253}
+  shopSkillsPanel: {fileID: 1538306476}
+  shopItemsPanel: {fileID: 456601416}
+  shopCharactersPanel: {fileID: 653971137}
+  shopBattlePassPanel: {fileID: 1586661790}
+  shopCoinsPanel: {fileID: 1259050200}
+  purchasedOfferImage: {fileID: 21300000, guid: ee01ee15967da4447ac85720e84d7a19, type: 3}
+  OfferImage: {fileID: 827393903}
+  inventoryManager: {fileID: 5798395918671371207}
+  rollPanel: {fileID: 1101024202}
+  slots:
+  - {fileID: 1485943163}
+  - {fileID: 290890898}
+  - {fileID: 673996181}
+  - {fileID: 23267706}
+  - {fileID: 1808025946}
+  - {fileID: 1811564333}
+  - {fileID: 3488369}
+  - {fileID: 818626776}
+  - {fileID: 1016567093}
+  - {fileID: 766034307}
+  slotSpriteBackground:
+  - {fileID: 6558138, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
+  - {fileID: 1859360189, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
+  - {fileID: -1911284510, guid: 639ec21b1f9e3154bb6cc49d9731278c, type: 3}
+  slotImageObj:
+  - {fileID: 1445738242}
+  - {fileID: 42200642}
+  - {fileID: 393291692}
+  - {fileID: 1362072893}
+  - {fileID: 1168259894}
+  - {fileID: 965053527}
+  - {fileID: 110628889}
+  - {fileID: 501301013}
+  - {fileID: 1753385791}
+  - {fileID: 2072506184}
+  slotImageBackground:
+  - {fileID: 551120171}
+  - {fileID: 2068567968}
+  - {fileID: 1627012543}
+  - {fileID: 505278724}
+  - {fileID: 1017965747}
+  - {fileID: 1909284085}
+  - {fileID: 506201787}
+  - {fileID: 1897554224}
+  - {fileID: 872401532}
+  - {fileID: 1270122313}
+  slotText:
+  - {fileID: 17640474}
+  - {fileID: 1927192605}
+  - {fileID: 464573757}
+  - {fileID: 1071762639}
+  - {fileID: 1337430759}
+  - {fileID: 1070254506}
+  - {fileID: 2003465204}
+  - {fileID: 217024818}
+  - {fileID: 1078335870}
+  - {fileID: 927986936}
+  settingsMenu: {fileID: 1222737036321507499}
+  profileMenu: {fileID: 681693754}
+  keybindsMenu: {fileID: 1701146157}
+  accountMenu: {fileID: 1616154300}
+  infoMenu: {fileID: 1130776828}
+  playerNameText: {fileID: 900247001}
+  playerUserText: {fileID: 1607504039}
+  playerLevelOptionsTxt: {fileID: 711968139}
+  changeNameInputField: {fileID: 1715630546}
+  changeNameUIgroup: {fileID: 37626160}
+  profileImage: {fileID: 1481157773}
+  defaultProfileImage: {fileID: 2800000, guid: 87f3fd00cea33204aafdcaa62b06e79b, type: 3}
+  audioMixer: {fileID: 24100000, guid: 71185d94cc6966742b0e625d9ce4026e, type: 2}
+  bgmSlider: {fileID: 1624117477661571208}
+  sfxSlider: {fileID: 3767057897902862878}
+  masterSlider: {fileID: 8986696132561514252}
 --- !u!114 &1624117477661571208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47404,7 +47343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015384933}
+      - m_Target: {fileID: 1620490663131218087}
         m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
         m_MethodName: Apply
         m_Mode: 1
@@ -48864,6 +48803,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5798395918671371207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969408975997298024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38cbd699b973a447a6d6970e1688104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpriteSkills:
+  - {fileID: 1822017894, guid: f9885c54953dfd94fb0f38b4680958a8, type: 3}
+  - {fileID: 141059688, guid: 0f1f6cdc9a4608d4d9a4c7de46377cad, type: 3}
+  - {fileID: 10379693, guid: fdf7cdf07140da141b5265a8ce45f7b3, type: 3}
+  - {fileID: 21300000, guid: 0a68a4a95a007c246bfcf031301cfc11, type: 3}
+  - {fileID: 21300000, guid: a7eafc360a698df44aa939a107516a11, type: 3}
+  - {fileID: 21300000, guid: ed4b916385f7ec249b2e078ec14d2ac3, type: 3}
+  - {fileID: 21300000, guid: b3dbaeac4f37031459d6b890db7398ad, type: 3}
+  - {fileID: 21300000, guid: 0c28b045eb45c1442a38b3b534892fc3, type: 3}
+  - {fileID: 21300000, guid: e541681c962eee74c9f52f76964346e5, type: 3}
+  - {fileID: 21300000, guid: 41a8913f9646949448b23d214b4ab731, type: 3}
+  - {fileID: 21300000, guid: 28b568c25d1ec9944bff8625f916a12e, type: 3}
+  - {fileID: 21300000, guid: df337b8868d315444b411eb8c13661e8, type: 3}
+  - {fileID: 21300000, guid: 76ba6796604e4fb4081515641896436f, type: 3}
+  - {fileID: 21300000, guid: ececadadeaf53f14292ec95bf432747a, type: 3}
+  - {fileID: 21300000, guid: 4c265170909c1be4db979652a489a2c8, type: 3}
+  - {fileID: 21300000, guid: 15bf37758209faf408691352e481dfad, type: 3}
+  - {fileID: 21300000, guid: 0665cce72b88ac2438c05af359a10040, type: 3}
+  - {fileID: 21300000, guid: 6276747286642ca4eb6770afacb38315, type: 3}
+  - {fileID: 21300000, guid: 71d92f7a8d7eae74093783f2f4ed9c54, type: 3}
+  - {fileID: 21300000, guid: 9e4c00176a2cf29479448ca9c0e1451c, type: 3}
+  - {fileID: 21300000, guid: 68bc85f9aa8ff694990585d9923f1535, type: 3}
+  - {fileID: 21300000, guid: 2b90236554e6f0b49b920c1b4576ea99, type: 3}
+  - {fileID: 21300000, guid: 0ee4b68b06658eb42b2cf30329f4bc88, type: 3}
+  - {fileID: 21300000, guid: a76cc638cc9e7fe4f9b721f3c8dda533, type: 3}
+  objectSpriteUpgradeItem:
+  - {fileID: 21300000, guid: 4dff13dc7f630a54aa5c56c77fc9f7fb, type: 3}
+  - {fileID: 21300000, guid: f08d81a4c7fabad45a2641c8a0c9afdc, type: 3}
+  - {fileID: 21300000, guid: 06133c9091472f04dbee896155fb78b2, type: 3}
+  - {fileID: 21300000, guid: 0593787e1f20d454c916e04af65f75e0, type: 3}
+  - {fileID: 21300000, guid: dbb387b47c74cc34f9a03ce23fb21d9f, type: 3}
+  - {fileID: 21300000, guid: 4c1ed8ffe35cc7748b49c2e60cb21692, type: 3}
+  - {fileID: 21300000, guid: bd2a8af6dcdec6841bc06126f8116d02, type: 3}
+  player: {fileID: 0}
 --- !u!4 &5814649827067994230
 Transform:
   m_ObjectHideFlags: 0
@@ -50371,6 +50356,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &7969408975997298024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8508336194835726203}
+  - component: {fileID: 1620490663131218087}
+  - component: {fileID: 5798395918671371207}
+  - component: {fileID: 168641561496540743}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &7969434261585743217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50842,6 +50846,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &8508336194835726203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969408975997298024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8554698034378846889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51064,6 +51083,7 @@ MonoBehaviour:
   bgmVolume: 0
   sfxVolume: 0
   masterVolume: 0
+  characterSkills: []
 --- !u!1 &8816250103139876402
 GameObject:
   m_ObjectHideFlags: 0
@@ -51641,7 +51661,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 855359802}
-  - {fileID: 2015384934}
+  - {fileID: 8508336194835726203}
   - {fileID: 1511165198}
   - {fileID: 5814649827067994230}
   - {fileID: 1435675318}

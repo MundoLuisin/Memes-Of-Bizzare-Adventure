@@ -834,7 +834,7 @@ public class HomeManager : MonoBehaviour
                 var values = new List<Item>(inventoryManager.skills.Values);
                 Skill randomSkill = (Skill)values[UnityEngine.Random.Range(0, values.Count)];
 
-                bool allAcquired = inventoryManager.skills.Values.OfType<Skill>().All(skill => skill.isAcquired);
+                bool allAcquired = inventoryManager.skills.Values.OfType<Skill>().Where(skill => !skill.isCharacterExclusive).All(skill => skill.isAcquired);
                 if (allAcquired)
                 {
                     //✩ 0
@@ -855,7 +855,7 @@ public class HomeManager : MonoBehaviour
                 }
                 else
                 {
-                    while (randomSkill.isAcquired)
+                    while (randomSkill.isAcquired || randomSkill.isCharacterExclusive)
                     {
                         randomSkill = (Skill)values[UnityEngine.Random.Range(0, values.Count)];
                     }

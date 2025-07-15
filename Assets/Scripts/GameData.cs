@@ -25,6 +25,10 @@ public class GameData : MonoBehaviour
     public Dictionary<string, Inventory> inventory = new Dictionary<string, Inventory>();
     public Dictionary<string, Character> charactersInventory = new Dictionary<string, Character>();
 
+    // NOT SAVING BUT STATIC DATA //
+    public List<Skill> characterSkills = new List<Skill>();
+    public int coins;
+
     void Awake()
     {
         if (Instance == null)

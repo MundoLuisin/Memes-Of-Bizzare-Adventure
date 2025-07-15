@@ -38,11 +38,11 @@ public class TurretManager : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (team == 'A' && collider.gameObject.layer == 12)
+        if (team == 'A' && (collider.gameObject.layer == 10 || collider.gameObject.layer == 12))
         {
             validTargets.Add(collider.gameObject);
         }
-        else if (team == 'B' && collider.gameObject.layer == 11)
+        else if (team == 'B' && (collider.gameObject.layer == 9 || collider.gameObject.layer == 11))
         {
             validTargets.Add(collider.gameObject);
         }
@@ -82,7 +82,7 @@ public class TurretManager : MonoBehaviour
             {
                 if (playerTargetScript.health > 0 && !playerTargetScript.isDead && !playerTargetScript.immunity)
                 {
-                    playerTargetScript.health -= 10;
+                    playerTargetScript.health -= 20;
                     audioSource.PlayOneShot(audioClipElectricShock);
                     GameObject lightningBoltReference = Instantiate(lightningBoltPrefab, target.transform.position, Quaternion.identity);
                     Destroy(lightningBoltReference, 1.5f);

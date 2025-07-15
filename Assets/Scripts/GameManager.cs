@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] FireWallsB;
 
     private bool finish = false;
-    private GameObject[] turrets = new GameObject[6];
+    private GameObject[] turrets = new GameObject[12];
     public GameObject[] turretsColocation;
 
     Vector3 A_SpawnLocation = new Vector3(-260, 2, 260);
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
+
+    [SerializeField] private TMP_Text coinsText;
 
     Animator anim;
     PlayerController playerController;
@@ -47,7 +50,7 @@ public class GameManager : MonoBehaviour
                 turretsColocation[i].transform.rotation
             );
 
-            turrets[i].GetComponent<TurretManager>().team = (i < 3) ? 'B' : 'A';
+            turrets[i].GetComponent<TurretManager>().team = (i < 6) ? 'B' : 'A';
         }
 
         CoreA.GetComponent<CoreManager>().team = 'A';
@@ -65,6 +68,8 @@ public class GameManager : MonoBehaviour
             raidTimer = 0;
             spawnFlag = true;
         }
+
+        coinsText.text = GameData.Instance.coins.ToString();
 
         if (spawnFlag)
         {

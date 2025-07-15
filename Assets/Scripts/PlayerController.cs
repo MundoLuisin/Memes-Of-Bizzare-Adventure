@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.Rendering;
@@ -73,7 +74,6 @@ public class PlayerController : MonoBehaviour
 
     #region Animations & Effects
     [HideInInspector] public Animator anim;
-    [SerializeField] private Animation[] cooldownAnimations;
     [SerializeField] private GameObject punchEffectPrefab;
     [SerializeField] private GameObject prefabSpellEffect;
     [SerializeField] private GameObject minionKillEffectPrefab;
@@ -89,15 +89,15 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Skills
-    private float cooldownTimerSkill1 = 0f;
-    private float cooldownTimerSkill2 = 0f;
-    private float cooldownTimerSkill3 = 0f;
-    [HideInInspector] public float cooldownTimeSkill1 = 5f;
-    [HideInInspector] public float cooldownTimeSkill2 = 15f;
-    [HideInInspector] public float cooldownTimeSkill3 = 30f;
-    private bool isOnCooldownSkill1 = true;
-    private bool isOnCooldownSkill2 = true;
-    private bool isOnCooldownSkill3 = true;
+    private Skill characterSkill_1;
+    private Skill characterSkill_2;
+    private Skill characterSkill_3;
+    [SerializeField] private Image imageSkill_1;
+    [SerializeField] private Image imageSkill_2;
+    [SerializeField] private Image imageSkill_3;
+    [SerializeField] private Image cooldownImageSkill_1;
+    [SerializeField] private Image cooldownImageSkill_2;
+    [SerializeField] private Image cooldownImageSkill_3;
     #endregion
     
     void Start()
@@ -105,23 +105,32 @@ public class PlayerController : MonoBehaviour
         playerName = GameData.Instance.playerName;
         playerNameText.text = playerName;
         playerLevelText.text = playerLevel.ToString();
+
+        healthSlider.maxValue = health;
+        easeHealthSlider.maxValue = health;
+
         vCam = GetComponentInChildren<CinemachineCamera>();
         var componentBase = vCam.GetCinemachineComponent(CinemachineCore.Stage.Body);
         var followComponent = componentBase as CinemachineFollow;
-        audioSource = this.GetComponent<AudioSource>();
+
+        audioSource = GetComponent<AudioSource>();
         myNavMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+
         characterModelInstance = Instantiate(GameData.Instance.currentCharacter.characterModel, playerSkinObject.transform);
         walkAudioSource = characterModelInstance.GetComponent<AudioSource>();
+
         health = GameData.Instance.currentCharacter.health;
         damage = GameData.Instance.currentCharacter.attackPower;
-        myNavMeshAgent.speed = GameData.Instance.currentCharacter.speed;
         attackTimer = GameData.Instance.currentCharacter.attackTimer;
-
+        myNavMeshAgent.speed = GameData.Instance.currentCharacter.speed;
         anim.avatar = GameData.Instance.currentCharacter.avatar;
 
+        SkillInitialization();
+
         myNavMeshAgent.enabled = false;
-        int coin = UnityEngine.Random.Range(0, 2);
+
+        int coin = UnityEngine.Random.Range(0, 1); // This needs to be changed very important !! The Correct => Range(0, 2) 
         if (coin == 0)
         {
             playerTeam = 'A';
@@ -140,16 +149,36 @@ public class PlayerController : MonoBehaviour
             this.gameObject.transform.position = playerSpawnPosition;
            followComponent.FollowOffset = vCamOffsetTeamB;
         }
-        myNavMeshAgent.enabled = true;
 
-        cooldownTimerSkill1 = cooldownTimeSkill1;
-        cooldownTimerSkill2 = cooldownTimeSkill2;
-        cooldownTimerSkill3 = cooldownTimeSkill3;
+        myNavMeshAgent.enabled = true;
 
         if (globalVolume.profile.TryGet(out Vignette vg)) vignette = vg;
         if (globalVolume.profile.TryGet(out ChromaticAberration ca)) chromatic = ca;
 
     }
+
+    void SkillInitialization()
+    {
+        List<Skill> skills = GameData.Instance.characterSkills;
+        int startIndex = (GameData.Instance.currentCharacter.index - 1) * 3;
+
+        characterSkill_1 = skills[startIndex];
+        characterSkill_2 = skills[startIndex + 1];
+        characterSkill_3 = skills[startIndex + 2];
+
+        imageSkill_1.sprite = characterSkill_1.sprite;
+        imageSkill_2.sprite = characterSkill_2.sprite;
+        imageSkill_3.sprite = characterSkill_3.sprite;
+
+        characterSkill_1.image = cooldownImageSkill_1;
+        characterSkill_2.image = cooldownImageSkill_2;
+        characterSkill_3.image = cooldownImageSkill_3;
+
+        StartCoroutine(Cooldown(characterSkill_1));
+        StartCoroutine(Cooldown(characterSkill_2));
+        StartCoroutine(Cooldown(characterSkill_3));
+    }
+
 
     void Update()
     {
@@ -266,6 +295,7 @@ public class PlayerController : MonoBehaviour
                         {
                             audioSource.PlayOneShot(randomKillAudioClip());  
                             GameObject minionKillEffectObj = Instantiate(minionKillEffectPrefab);
+                            if(minion.health <= 0) GameData.Instance.coins += 1;
                             Destroy(minionKillEffectObj, 3f);
                         } 
                     }
@@ -273,6 +303,7 @@ public class PlayerController : MonoBehaviour
                     if(target.TryGetComponent<TurretManager>(out TurretManager turret))
                     {
                         turret.health -= damage;
+                        if(turret.health <= 0) GameData.Instance.coins += 25;
                     }
 
                     if(target.TryGetComponent<CoreManager>(out CoreManager core))
@@ -298,37 +329,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) Skill_1();
         if (Input.GetKeyDown(KeyCode.E)) Skill_2();
         if (Input.GetKeyDown(KeyCode.R)) Skill_3();
-
-        if (isOnCooldownSkill1)
-        {
-            cooldownTimerSkill1 -= Time.deltaTime;
-            cooldownAnimations[0].GetComponent<Animation>().Play("Skill Cooldown 5s");
-            if (cooldownTimerSkill1 <= 0f)
-            {
-                isOnCooldownSkill1 = false;
-            }
-        }
-
-        if (isOnCooldownSkill2)
-        {
-            cooldownTimerSkill2 -= Time.deltaTime;
-            cooldownAnimations[1].GetComponent<Animation>().Play("Skill Cooldown 15s");
-            if (cooldownTimerSkill2 <= 0f)
-            {
-                isOnCooldownSkill2 = false;
-            }
-        }
-
-        if (isOnCooldownSkill3)
-        {
-            cooldownTimerSkill3 -= Time.deltaTime;
-            cooldownAnimations[2].GetComponent<Animation>().Play("Skill Cooldown 30s");
-            if (cooldownTimerSkill3 <= 0f)
-            {
-                isOnCooldownSkill3 = false;
-            }
-        }
-
     }
 
     AudioClip randomKillAudioClip()
@@ -370,28 +370,18 @@ public class PlayerController : MonoBehaviour
 
     public void Skill_1()
     {
-        if (!isOnCooldownSkill1)
-        {
-            isOnCooldownSkill1 = true;
-            cooldownTimerSkill1 = cooldownTimeSkill1;
-            health += 25;
-        }
+        characterSkill_1.Consume(this);
     }
 
     public void Skill_2()
     {
-       if (!isOnCooldownSkill2)
-        {
-            isOnCooldownSkill2 = true;
-            cooldownTimerSkill2 = cooldownTimeSkill2;
-            anim.SetTrigger("PowerUp");
-            damage += 5;
-        }
+        characterSkill_2.Consume(this);
     }
 
     public void Skill_3()
     {
-        if (!isOnCooldownSkill3 && hasTarget)
+        characterSkill_3.Consume(this);
+       /* if (!isOnCooldownSkill3 && hasTarget)
         {
             isOnCooldownSkill3 = true;
             cooldownTimerSkill3 = cooldownTimeSkill3;
@@ -404,13 +394,77 @@ public class PlayerController : MonoBehaviour
             damage += 200; // Parchear el como la skill hace daño en un futuro porque esto esta mal hecho hahahaha 
             audioSource.PlayOneShot(audioClipMagic);
             Destroy(spellEffect, 8f);
-        }
+        }*/
     }
 
-    public void OnSpellEnd()
+    public IEnumerator Cooldown(Skill skill)
     {
+        float timer = skill.cooldown;
+        skill.image.fillAmount = 1f;
+        skill.currentCooldown = skill.cooldown;
+
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            skill.currentCooldown = Mathf.CeilToInt(timer);
+            skill.image.fillAmount = timer / skill.cooldown;
+            yield return null;
+        }
+
+        skill.currentCooldown = 0;
+        skill.image.fillAmount = 0f;
+    }
+
+    public IEnumerator RemoveBoostAfterTime(PlayerController player, int timeSkill, string typeOfBoost, float originalHealth, float originalDamage, float originalRange, float originalAttackTimer, float originalSpeed, float originalAcceleration, bool originalImmunity)
+    {
+        yield return new WaitForSeconds(timeSkill);
+
+        switch (typeOfBoost)
+        {
+            case "health":
+                player.health = originalHealth;
+            break;
+            case "damage":
+                player.damage = originalDamage;
+            break;
+            case "range":
+                player.range = originalRange;
+            break;
+            case "rangeAttack":
+                player.range = originalRange;
+                player.damage = originalDamage;
+            break;
+            case "attackRate":
+                player.attackTimer = originalAttackTimer;
+            break;
+            case "immunity":
+                player.immunity = originalImmunity;
+            break;
+            case "speed":
+                player.myNavMeshAgent.speed = originalSpeed;
+            break;
+            case "acceleration":
+                player.myNavMeshAgent.acceleration = originalAcceleration;
+            break;
+            case "fastCombo":
+                player.myNavMeshAgent.speed = originalSpeed;
+                player.myNavMeshAgent.acceleration = originalAcceleration;
+            break;
+            case "insanity":
+                player.health = originalHealth;
+                player.damage = originalDamage;
+                player.range = originalRange;
+            break;
+        }
+    }  
+
+    public void ReturnToBase()
+    {
+        myNavMeshAgent.ResetPath();
+        myNavMeshAgent.enabled = false;
+        hasTarget = false; 
+        this.gameObject.transform.position = playerSpawnPosition;
         myNavMeshAgent.enabled = true;
-        damage -= 200; // Parchear el como la skill hace daño en un futuro porque esto esta mal hecho hahahaha 
     }
 
     IEnumerator UpdateLine()

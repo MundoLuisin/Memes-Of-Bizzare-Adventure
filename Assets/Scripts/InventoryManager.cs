@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using System.Linq;
 
 // ========================
 //   INVENTORY MANAGER
@@ -29,15 +30,39 @@ public class InventoryManager : MonoBehaviour
 
     void SkillsInitialization()
     {
-        skills.Add("Fidget spinner", new Skill("Fidget spinner", 0, 30, 15, objectSpriteSkills[0], null, 1.25f, "damage"));
-        skills.Add("Pop it", new Skill("Pop it", 0, 20, 10, objectSpriteSkills[1], null, 1.5f, "life"));
-        skills.Add("Squish Ball", new Skill("Squish Ball", 0, 15, 30, objectSpriteSkills[2], null, 0.5f, "attackRate"));
-        skills.Add("Slime", new Skill("Slime", 0, 1, 60, objectSpriteSkills[3], null, 0.75f, "skillCooldown"));
-        skills.Add("Baby Angel", new Skill("Baby Angel", 0, 5, 120, objectSpriteSkills[4], null, 0f, "immunity"));
-        skills.Add("Reversible Octopus", new Skill("Reversible Octopus", 0, 35, 100, objectSpriteSkills[5], null, 1.75f, "range"));
-        skills.Add("Squishy", new Skill("Squishy", 0, 30, 240, objectSpriteSkills[6], null, 1.5f, "acceleration"));
-        skills.Add("Sharklas", new Skill("Sharklas", 0, 60, 180, objectSpriteSkills[7], null, 2f, "speed"));
-        skills.Add("Labubu", new Skill("Labubu", 0, 15, 300, objectSpriteSkills[8], null, 2f, "insanity"));
+        // Characters Exclusive Skills
+        skills.Add("Linganguli", new Skill("Linganguli", 0, 6, 3, objectSpriteSkills[0], null, 1.25f, "damage", true));
+        skills.Add("Sauce", new Skill("Sauce", 0, 30, 15, objectSpriteSkills[1], null, 1.25f, "speed", true));
+        skills.Add("Phone", new Skill("Phone", 0, 60, 5, objectSpriteSkills[2], null, 1.2f, "insanity", true));
+
+        skills.Add("Bat", new Skill("Bat", 0, 9, 3, objectSpriteSkills[3], null, 1.3f, "damage", true));
+        skills.Add("Fire", new Skill("Fire", 0, 25, 10, objectSpriteSkills[4], null, 1.2f, "acceleration", true));
+        skills.Add("WoodShield", new Skill("WoodShield", 0, 60, 5, objectSpriteSkills[5], null, 0f, "immunity", true));
+
+        skills.Add("Motor", new Skill("Motor", 0, 10, 1, objectSpriteSkills[6], null, 1.75f, "damage", true));
+        skills.Add("Wheels", new Skill("Wheels", 0, 60, 15, objectSpriteSkills[7], null, 1.35f, "acceleration", true));
+        skills.Add("Super Fuel", new Skill("Super Fuel", 0, 60, 5, objectSpriteSkills[8], null, 1.1f, "insanity", true));
+
+        skills.Add("Gun", new Skill("Gun", 0, 12, 2, objectSpriteSkills[9], null, 1.5f, "rangeAttack", true));
+        skills.Add("Gold Necklace", new Skill("Gold Necklace", 0, 45, 15, objectSpriteSkills[10], null, 1.1f, "fastCombo", true));
+        skills.Add("TattoMachine", new Skill("TattoMachine", 0, 60, 15, objectSpriteSkills[11], null, 1.5f, "health", true));
+
+        skills.Add("Stocks", new Skill("Stocks", 0, 12, 2, objectSpriteSkills[12], null, 1.5f, "damage", true));
+        skills.Add("Money", new Skill("Money", 0, 45, 10, objectSpriteSkills[1], null, 1.5f, "speed", true));
+        skills.Add("Stock Market", new Skill("Stock Market", 0, 45, 5, objectSpriteSkills[14], null, 0f, "attackRate", true));
+
+        GameData.Instance.characterSkills = skills.Values.OfType<Skill>().Take(15).ToList();
+
+        // Normal Skills
+        skills.Add("AI", new Skill("AI", 0, 0, 0, objectSpriteSkills[15], null, 0f, "", false));
+        skills.Add("Energy Drink", new Skill("Energy Drink", 0, 0, 0, objectSpriteSkills[16], null, 0f, "", false));
+        skills.Add("Hotdog", new Skill("Hotdog", 0, 0, 0, objectSpriteSkills[17], null, 0f, "", false));
+        skills.Add("Looksmaxing", new Skill("Looksmaxing", 0, 0, 0, objectSpriteSkills[18], null, 0f, "", false));
+        skills.Add("Mayonnasie", new Skill("Mayonnasie", 0, 0, 0, objectSpriteSkills[19], null, 0f, "", false));
+        skills.Add("Ohio", new Skill("Ohio", 0, 0, 0, objectSpriteSkills[20], null, 0f, "", false));
+        skills.Add("Ramen", new Skill("Ramen", 0, 0, 0, objectSpriteSkills[21], null, 0f, "", false));
+        skills.Add("Rizz", new Skill("Rizz", 0, 0, 0, objectSpriteSkills[22], null, 0f, "", false));
+        skills.Add("Screwdriver", new Skill("Screwdriver", 0, 0, 0, objectSpriteSkills[23], null, 0f, "", false));
     }
 
     void UpgradeItemInitialization()
@@ -48,11 +73,11 @@ public class InventoryManager : MonoBehaviour
 
     void CharacterGemsInitialization()
     {
-        characterGems.Add("Sr. Pollo Gem", new UpgradeItem("Sr. Pollo Gem", 0, objectSpriteUpgradeItem[0], null, "UpgradeGem"));
-        characterGems.Add("Tung tung tung Sahur Gem", new UpgradeItem("Tung tung tung Sahur Gem", 0, objectSpriteUpgradeItem[1], null, "UpgradeGem"));
-        characterGems.Add("EA 68 Gem", new UpgradeItem("EA 68 Gem", 0, objectSpriteUpgradeItem[0], null, "UpgradeGem"));
-        characterGems.Add("Quandle Gem", new UpgradeItem("Quandle Gem", 0, objectSpriteUpgradeItem[1], null, "UpgradeGem"));
-        characterGems.Add("Stonks Man Gem", new UpgradeItem("Stonks Man Gem", 0, objectSpriteUpgradeItem[0], null, "UpgradeGem"));
+        characterGems.Add("Sr. Pollo Gem", new UpgradeItem("Sr. Pollo Gem", 0, objectSpriteUpgradeItem[2], null, "UpgradeGem"));
+        characterGems.Add("Tung tung tung Sahur Gem", new UpgradeItem("Tung tung tung Sahur Gem", 0, objectSpriteUpgradeItem[3], null, "UpgradeGem"));
+        characterGems.Add("EA 68 Gem", new UpgradeItem("EA 68 Gem", 0, objectSpriteUpgradeItem[4], null, "UpgradeGem"));
+        characterGems.Add("Quandle Gem", new UpgradeItem("Quandle Gem", 0, objectSpriteUpgradeItem[5], null, "UpgradeGem"));
+        characterGems.Add("Stonks Man Gem", new UpgradeItem("Stonks Man Gem", 0, objectSpriteUpgradeItem[6], null, "UpgradeGem"));
     }
 
     // Ejemplo: Llamar desde botón o evento
@@ -91,10 +116,10 @@ public abstract class Item
     }
 
     // Only for objects usable in game 
-    public virtual  void Consume(PlayerController player){} 
+    public virtual void Consume(PlayerController player){} 
 
     //Only for objects of statistical use or to improve things.
-    public virtual  void Use(Character character){}
+    public virtual void Use(Character character){}
 }
 
 // ========================
@@ -108,23 +133,42 @@ public class Skill : Item
     public float boost;
     public string typeOfBoost;
     public bool isAcquired = false;
+    public bool isCharacterExclusive;
+    public Image image; 
+    public Sprite sprite; 
 
-    public Skill(string name, int amount, int cooldown, int timeSkill, Sprite sprite, Image image, float boost, string typeOfBoost)
+    public int currentCooldown = 0;
+
+    public Skill(string name, int amount, int cooldown, int timeSkill, Sprite sprite, Image image, float boost, string typeOfBoost, bool isCharacterExclusive)
         : base(name, amount, sprite, image)
     {
         this.cooldown = cooldown;
         this.timeSkill = timeSkill;
         this.boost = boost;
         this.typeOfBoost = typeOfBoost;
+        this.isCharacterExclusive = isCharacterExclusive;
+        this.image = image;
+        this.sprite = sprite;
     }
 
     public override void Consume(PlayerController player)
     {
-        if (cooldown > 0) return;
+        if (currentCooldown > 0) return;
+
+        currentCooldown = cooldown;
+        player.StartCoroutine(player.Cooldown(this));
+
+        float originalHealth = player.health;
+        float originalDamage = player.damage;
+        float originalRange = player.range;
+        float originalAttackTimer = player.attackTimer;
+        float originalSpeed = player.myNavMeshAgent.speed;
+        float originalAcceleration = player.myNavMeshAgent.acceleration;
+        bool originalImmunity = player.immunity;
 
         switch (typeOfBoost)
         {
-            case "life":
+            case "health":
                 player.health *= boost;
                 break;
             case "damage":
@@ -133,13 +177,12 @@ public class Skill : Item
             case "range":
                 player.range *= boost;
                 break;
+            case "rangeAttack":
+                player.range *= boost;
+                player.damage *= boost;
+                break;
             case "attackRate":
                 player.attackTimer *= boost;
-                break;
-            case "skillCooldown":
-                player.cooldownTimeSkill1 *= boost;
-                player.cooldownTimeSkill2 *= boost;
-                player.cooldownTimeSkill3 *= boost;
                 break;
             case "immunity":
                 player.immunity = true;
@@ -148,6 +191,10 @@ public class Skill : Item
                 player.myNavMeshAgent.speed *= boost;
                 break;
             case "acceleration":
+                player.myNavMeshAgent.acceleration *= boost;
+                break;
+            case "fastCombo":
+                player.myNavMeshAgent.speed *= boost;
                 player.myNavMeshAgent.acceleration *= boost;
                 break;
             case "insanity":
@@ -159,6 +206,8 @@ public class Skill : Item
                 Debug.LogWarning("Boost desconocido: " + typeOfBoost);
                 break;
         }
+
+        player.StartCoroutine(player.RemoveBoostAfterTime(player, timeSkill, typeOfBoost, originalHealth, originalDamage, originalRange, originalAttackTimer, originalSpeed, originalAcceleration, originalImmunity));
     }
 }
 
