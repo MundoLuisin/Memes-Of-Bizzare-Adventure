@@ -94,6 +94,8 @@ public class DataManager : MonoBehaviour
         gameSaveData.bgmVolume = GameData.Instance.bgmVolume;
         gameSaveData.sfxVolume = GameData.Instance.sfxVolume;
         gameSaveData.masterVolume = GameData.Instance.masterVolume;
+        gameSaveData.buildingsDisappear = GameData.Instance.buildingsDisappear;
+        gameSaveData.isPhoneActive = GameData.Instance.isPhoneActive;
 
         gameSaveData.currentCharacter = GameData.Instance.currentCharacter;
 
@@ -128,6 +130,8 @@ public class DataManager : MonoBehaviour
         GameData.Instance.bgmVolume = gameSaveData.bgmVolume;
         GameData.Instance.sfxVolume = gameSaveData.sfxVolume;
         GameData.Instance.masterVolume = gameSaveData.masterVolume;
+        GameData.Instance.buildingsDisappear = gameSaveData.buildingsDisappear;
+        GameData.Instance.isPhoneActive = gameSaveData.isPhoneActive;
 
         GameData.Instance.currentCharacter = gameSaveData.currentCharacter;
 
@@ -176,6 +180,8 @@ public class GameSaveData
     public float bgmVolume;
     public float sfxVolume;
     public float masterVolume;
+    public bool buildingsDisappear;
+    public bool isPhoneActive = true;
     public Character currentCharacter;
     public List<ItemEntry> itemList = new List<ItemEntry>();
     public List<InventoryEntry> inventory = new List<InventoryEntry>();

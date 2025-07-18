@@ -1,11 +1,11 @@
 {
-    "money": 0,
+    "money": 1632,
     "battlePassPurchased": false,
-    "isOfferPackPurchased": false,
-    "playerName": "SussyBaka",
+    "isOfferPackPurchased": true,
+    "playerName": "Monkudox",
     "playerLevel": 0,
     "experience": 0.0,
-    "pity": 3,
+    "pity": 0,
     "bgmVolume": 1.0,
     "sfxVolume": 1.0,
     "masterVolume": 1.0,
@@ -30,14 +30,14 @@
         },
         "isUnlocked": true,
         "characterModel": {
-            "instanceID": 46642
+            "instanceID": 54314
         },
         "avatar": {
-            "instanceID": 40352
+            "instanceID": 40364
         },
         "musicGenre": "dubstep",
         "characterIcon": {
-            "instanceID": 54044
+            "instanceID": 54264
         }
     },
     "itemList": [],

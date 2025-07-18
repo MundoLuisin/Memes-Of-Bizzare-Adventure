@@ -8,7 +8,6 @@ using System.Collections;
 public class UIGameManager : MonoBehaviour
 {
     private bool openCanva = false;
-    private bool isPhoneActive = true;
     [SerializeField] private GameObject canva;
     [SerializeField] private GameObject optionsCanva;
     [SerializeField] private GameObject phone;
@@ -21,11 +20,6 @@ public class UIGameManager : MonoBehaviour
     private bool isPointer = false;
 
     [SerializeField] private Animator transitionAnimator;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -96,8 +90,14 @@ public class UIGameManager : MonoBehaviour
 
     public void ActivatePhone()
     {
-       isPhoneActive = !isPhoneActive;
-       phone.SetActive(isPhoneActive);
+       GameData.Instance.isPhoneActive = !GameData.Instance.isPhoneActive;
+       phone.SetActive(GameData.Instance.isPhoneActive);
+       audioSource.PlayOneShot(clickSound);
+    }
+
+    public void BuildingsDisappear()
+    {
+       GameData.Instance.buildingsDisappear = !GameData.Instance.buildingsDisappear;
        audioSource.PlayOneShot(clickSound);
     }
 

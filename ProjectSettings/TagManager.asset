@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Turret
+  - BaseZone
+  - StrawberryElephant
+  - TrenostruzzoTurbo3000
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Player Team B
   - Building
   - CloudMask
-  - 
+  - Boss
   - 
   - 
   - 

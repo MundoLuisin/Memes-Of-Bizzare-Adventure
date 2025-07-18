@@ -63,6 +63,9 @@ public class InventoryManager : MonoBehaviour
         skills.Add("Ramen", new Skill("Ramen", 0, 0, 0, objectSpriteSkills[21], null, 0f, "", false));
         skills.Add("Rizz", new Skill("Rizz", 0, 0, 0, objectSpriteSkills[22], null, 0f, "", false));
         skills.Add("Screwdriver", new Skill("Screwdriver", 0, 0, 0, objectSpriteSkills[23], null, 0f, "", false));
+
+        // Special Skill
+        skills.Add("Sigma", new Skill("Sigma", 0, 0, 0, objectSpriteSkills[24], null, 0f, "", true));
     }
 
     void UpgradeItemInitialization()
@@ -182,7 +185,7 @@ public class Skill : Item
                 player.damage *= boost;
                 break;
             case "attackRate":
-                player.attackTimer *= boost;
+                player.realAttackTimer *= boost;
                 break;
             case "immunity":
                 player.immunity = true;

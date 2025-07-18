@@ -1007,6 +1007,16 @@ public class HomeManager : MonoBehaviour
         StartCoroutine(ShowLoadDialogCoroutine());
     }
 
+    public void ActivatePhone()
+    {
+       GameData.Instance.isPhoneActive = !GameData.Instance.isPhoneActive;
+    }
+
+    public void BuildingsDisappear()
+    {
+       GameData.Instance.buildingsDisappear = !GameData.Instance.buildingsDisappear;
+    }
+
     private IEnumerator ShowLoadDialogCoroutine()
     {
         string[] filters = { "Image Files", ".png,.jpg,.jpeg" };
@@ -1115,5 +1125,57 @@ public class HomeManager : MonoBehaviour
         DataManager.Instance.WipeAllData();
     }
     #endregion 
+
+    #region BATTLE PASS
+
+    // REWARDS
+    public void RewardMoney_50()
+    {
+        GameData.Instance.money += 50;
+    }
+
+    public void RewardXp_500()
+    {
+       RewardItem("XP Bottle", 500);
+    }
+
+    public void RewardXp_50()
+    {
+        RewardItem("XP Bottle", 50);
+    }
+
+    public void RewardStardust_75()
+    {
+        RewardItem("StarDust Bottle", 75);
+    }
+
+    public void RewardStardust_5()
+    {
+        RewardItem("StarDust Bottle", 5);
+    }
+
+    void RewardItem(string itemName, int amount)
+    {
+        Item fallbackItem = null;
+        if (inventoryManager.upgradeItems.ContainsKey(itemName)) 
+        {
+            fallbackItem = inventoryManager.upgradeItems[itemName];
+        }
+
+        if (inventoryManager.inventory.ContainsKey(itemName))
+        {
+            inventoryManager.inventory[itemName].amount += amount;
+        }
+        else
+        {
+            inventoryManager.inventory.Add(itemName, new Inventory(itemName, amount, fallbackItem));
+        }
+    }
+
+    public void RewardSigmaSkill()
+    {
+        inventoryManager.inventory.Add("Sigma", new Inventory("Sigma", 1, inventoryManager.upgradeItems["Sigma"]));
+    }
+    #endregion
 }
 

@@ -9,6 +9,7 @@ public class ObstructionHologram : MonoBehaviour
 
     private Dictionary<Renderer, Material[]> originalMats = new();
     private List<Renderer> currentObstructions = new();
+    private List<GameObject> disabledObjects = new();
 
     void Update()
     {
@@ -25,27 +26,49 @@ public class ObstructionHologram : MonoBehaviour
             {
                 if (!originalMats.ContainsKey(rend))
                 {
-                    originalMats[rend] = rend.materials;
-                    Material[] holoArray = new Material[rend.materials.Length];
-                    for (int i = 0; i < holoArray.Length; i++)
-                        holoArray[i] = holographicMat;
-                    rend.materials = holoArray;
+                    if (GameData.Instance.buildingsDisappear)
+                    {
+                        GameObject go = rend.gameObject;
+                        if (go.activeSelf)
+                        {
+                            disabledObjects.Add(go);
+                            go.SetActive(false);
+                        }
+                    }
+                    else
+                    {
+                        originalMats[rend] = rend.materials;
+                        Material[] holoArray = new Material[rend.materials.Length];
+                        for (int i = 0; i < holoArray.Length; i++)
+                            holoArray[i] = holographicMat;
+                        rend.materials = holoArray;
+                        currentObstructions.Add(rend);
+                    }
                 }
-
-                currentObstructions.Add(rend);
             }
         }
     }
 
     void ClearOldObstructions()
     {
-        foreach (Renderer r in currentObstructions)
+        if (GameData.Instance.buildingsDisappear)
         {
-            if (originalMats.ContainsKey(r))
-                r.materials = originalMats[r];
+            foreach (GameObject obj in disabledObjects)
+            {
+                if (obj != null)
+                    obj.SetActive(true);
+            }
+            disabledObjects.Clear();
         }
-
-        currentObstructions.Clear();
-        originalMats.Clear();
+        else
+        {
+            foreach (Renderer r in currentObstructions)
+            {
+                if (originalMats.ContainsKey(r))
+                    r.materials = originalMats[r];
+            }
+            currentObstructions.Clear();
+            originalMats.Clear();
+        }
     }
 }

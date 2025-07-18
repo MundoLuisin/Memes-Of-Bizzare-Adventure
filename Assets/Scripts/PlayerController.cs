@@ -19,11 +19,16 @@ public class PlayerController : MonoBehaviour
     int layerTeam_B = 10;
     int layerPlayerTeam_A = 11;
     int layerPlayerTeam_B = 12;
+    int bossLayer = 15;
     int enemyLayer;
+    int teamLayer;
     string playerName;
     [HideInInspector] public char playerTeam;
     int playerLevel = 1;
-    int playerExperience = 0;
+
+    float returnToBaseCooldownTimer = 0;
+    [SerializeField] private Image returnToBaseCooldownImage;
+    [SerializeField] private GameObject shopCanvasButton;
 
     [HideInInspector] public CinemachineCamera vCam;
     Vector3 vCamOffsetTeamA = new Vector3(-98.15f, 196.3f, -170f);
@@ -53,9 +58,11 @@ public class PlayerController : MonoBehaviour
 
     #region Main Stats
     public float attackTimer;
+    public float realAttackTimer;
     public float health;
     public float damage;
     public float speed;
+    public float minionKillValue = 1;
     bool healthRecuperationFlag = true;
     public bool  isDead = false;
     public Slider healthSlider;
@@ -89,9 +96,9 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Skills
-    private Skill characterSkill_1;
-    private Skill characterSkill_2;
-    private Skill characterSkill_3;
+    [HideInInspector] public Skill characterSkill_1;
+    [HideInInspector] public Skill characterSkill_2;
+    [HideInInspector] public Skill characterSkill_3;
     [SerializeField] private Image imageSkill_1;
     [SerializeField] private Image imageSkill_2;
     [SerializeField] private Image imageSkill_3;
@@ -123,6 +130,7 @@ public class PlayerController : MonoBehaviour
         health = GameData.Instance.currentCharacter.health;
         damage = GameData.Instance.currentCharacter.attackPower;
         attackTimer = GameData.Instance.currentCharacter.attackTimer;
+        realAttackTimer = attackTimer;
         myNavMeshAgent.speed = GameData.Instance.currentCharacter.speed;
         anim.avatar = GameData.Instance.currentCharacter.avatar;
 
@@ -136,6 +144,7 @@ public class PlayerController : MonoBehaviour
             playerTeam = 'A';
             this.gameObject.layer = layerPlayerTeam_A;
             enemyLayer = layerTeam_B;
+            teamLayer = layerTeam_A;
             playerSpawnPosition = playerPositionTeamA;
             this.gameObject.transform.position = playerSpawnPosition;
             followComponent.FollowOffset = vCamOffsetTeamA;
@@ -145,6 +154,7 @@ public class PlayerController : MonoBehaviour
             playerTeam = 'B';
             this.gameObject.layer = layerPlayerTeam_B;
             enemyLayer = layerTeam_A;
+            teamLayer = layerTeam_B;
             playerSpawnPosition = playerPositionTeamB;
             this.gameObject.transform.position = playerSpawnPosition;
            followComponent.FollowOffset = vCamOffsetTeamB;
@@ -154,6 +164,8 @@ public class PlayerController : MonoBehaviour
 
         if (globalVolume.profile.TryGet(out Vignette vg)) vignette = vg;
         if (globalVolume.profile.TryGet(out ChromaticAberration ca)) chromatic = ca;
+
+        StartCoroutine(ReturnToBaseCooldown());
 
     }
 
@@ -238,7 +250,7 @@ public class PlayerController : MonoBehaviour
                         hasTarget = false;
                     }
 
-                    if(hit.collider.gameObject.layer == enemyLayer)
+                    if(hit.collider.gameObject.layer == enemyLayer || hit.collider.gameObject.layer == bossLayer)
                     {
                         target = hit.collider.gameObject;
                         hasTarget = true;
@@ -285,7 +297,7 @@ public class PlayerController : MonoBehaviour
 
                 if(attackTimer <= 0)
                 {
-                    attackTimer = 2;
+                    attackTimer = realAttackTimer;
 
                     if(target.TryGetComponent<MinionAiScript>(out MinionAiScript minion))
                     {
@@ -295,9 +307,14 @@ public class PlayerController : MonoBehaviour
                         {
                             audioSource.PlayOneShot(randomKillAudioClip());  
                             GameObject minionKillEffectObj = Instantiate(minionKillEffectPrefab);
-                            if(minion.health <= 0) GameData.Instance.coins += 1;
+                            if(minion.health <= 0) GameData.Instance.coins += minionKillValue;
                             Destroy(minionKillEffectObj, 3f);
                         } 
+                    }
+
+                    if(target.TryGetComponent<JungleBossAI>(out JungleBossAI strawberryElephant))
+                    {
+                        strawberryElephant.health -= damage;
                     }
 
                     if(target.TryGetComponent<TurretManager>(out TurretManager turret))
@@ -435,7 +452,7 @@ public class PlayerController : MonoBehaviour
                 player.damage = originalDamage;
             break;
             case "attackRate":
-                player.attackTimer = originalAttackTimer;
+                player.realAttackTimer = originalAttackTimer;
             break;
             case "immunity":
                 player.immunity = originalImmunity;
@@ -456,15 +473,54 @@ public class PlayerController : MonoBehaviour
                 player.range = originalRange;
             break;
         }
-    }  
+    }
+
+    public IEnumerator ReturnToBaseCooldown()
+    {
+        returnToBaseCooldownTimer = 0f;
+        returnToBaseCooldownImage.fillAmount = 1f; 
+
+        while (returnToBaseCooldownTimer < 5f)
+        {
+            returnToBaseCooldownTimer += Time.deltaTime;
+            float progress = returnToBaseCooldownTimer / 5f;
+            returnToBaseCooldownImage.fillAmount = Mathf.Lerp(1f, 0f, progress);
+            yield return null;
+        }
+
+        returnToBaseCooldownImage.fillAmount = 0f;
+        returnToBaseCooldownTimer = 0f;
+    }
+ 
 
     public void ReturnToBase()
     {
-        myNavMeshAgent.ResetPath();
-        myNavMeshAgent.enabled = false;
-        hasTarget = false; 
-        this.gameObject.transform.position = playerSpawnPosition;
-        myNavMeshAgent.enabled = true;
+        if(returnToBaseCooldownTimer <= 0)
+        {  
+            myNavMeshAgent.ResetPath();
+            myNavMeshAgent.enabled = false;
+            hasTarget = false; 
+            this.gameObject.transform.position = playerSpawnPosition;
+            myNavMeshAgent.enabled = true;
+
+            StartCoroutine(ReturnToBaseCooldown());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("BaseZone") && other.gameObject.layer == teamLayer)
+        {
+            shopCanvasButton.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("BaseZone") && other.gameObject.layer == teamLayer)
+        {
+            shopCanvasButton.SetActive(false);
+        }
     }
 
     IEnumerator UpdateLine()

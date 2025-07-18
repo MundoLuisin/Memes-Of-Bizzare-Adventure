@@ -21,13 +21,16 @@ public class GameData : MonoBehaviour
     public float sfxVolume;
     public float masterVolume;
 
+    public bool buildingsDisappear;
+    public bool isPhoneActive = true;
+
     public Dictionary<string, Item> item = new Dictionary<string, Item>();
     public Dictionary<string, Inventory> inventory = new Dictionary<string, Inventory>();
     public Dictionary<string, Character> charactersInventory = new Dictionary<string, Character>();
 
     // NOT SAVING BUT STATIC DATA //
     public List<Skill> characterSkills = new List<Skill>();
-    public int coins;
+    public float coins;
 
     void Awake()
     {
