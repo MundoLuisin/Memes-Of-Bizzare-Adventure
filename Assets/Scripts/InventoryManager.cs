@@ -120,6 +120,7 @@ public abstract class Item
 
     // Only for objects usable in game 
     public virtual void Consume(PlayerController player){} 
+    public virtual void ConsumeBot(BotController player){} 
 
     //Only for objects of statistical use or to improve things.
     public virtual void Use(Character character){}
@@ -211,6 +212,65 @@ public class Skill : Item
         }
 
         player.StartCoroutine(player.RemoveBoostAfterTime(player, timeSkill, typeOfBoost, originalHealth, originalDamage, originalRange, originalAttackTimer, originalSpeed, originalAcceleration, originalImmunity));
+    }
+
+    public override void ConsumeBot(BotController player)
+    {
+        if (currentCooldown > 0) return;
+
+        currentCooldown = cooldown;
+        player.StartCoroutine(player.Cooldown(this));
+
+        float originalHealth = player.health;
+        float originalDamage = player.damage;
+        float originalRange = player.range;
+        float originalAttackTimer = player.attackTimer;
+        float originalSpeed = player.myNavMeshAgent.speed;
+        float originalAcceleration = player.myNavMeshAgent.acceleration;
+        bool originalImmunity = player.immunity;
+
+        switch (typeOfBoost)
+        {
+            case "health":
+                player.health *= boost;
+                break;
+            case "damage":
+                player.damage *= boost;
+                break;
+            case "range":
+                player.range *= boost;
+                break;
+            case "rangeAttack":
+                player.range *= boost;
+                player.damage *= boost;
+                break;
+            case "attackRate":
+                player.realAttackTimer *= boost;
+                break;
+            case "immunity":
+                player.immunity = true;
+                break;
+            case "speed":
+                player.myNavMeshAgent.speed *= boost;
+                break;
+            case "acceleration":
+                player.myNavMeshAgent.acceleration *= boost;
+                break;
+            case "fastCombo":
+                player.myNavMeshAgent.speed *= boost;
+                player.myNavMeshAgent.acceleration *= boost;
+                break;
+            case "insanity":
+                player.health *= boost;
+                player.damage *= boost;
+                player.range *= boost;
+                break;
+            default:
+                Debug.LogWarning("Boost desconocido: " + typeOfBoost);
+                break;
+        }
+
+        player.StartCoroutine(player.RemoveBoostAfterTimeBot(player, timeSkill, typeOfBoost, originalHealth, originalDamage, originalRange, originalAttackTimer, originalSpeed, originalAcceleration, originalImmunity));
     }
 }
 

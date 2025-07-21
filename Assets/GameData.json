@@ -9,6 +9,8 @@
     "bgmVolume": 1.0,
     "sfxVolume": 1.0,
     "masterVolume": 1.0,
+    "buildingsDisappear": true,
+    "isPhoneActive": true,
     "currentCharacter": {
         "name": "Stonks Man",
         "index": 5,
@@ -30,14 +32,14 @@
         },
         "isUnlocked": true,
         "characterModel": {
-            "instanceID": 54314
+            "instanceID": 47544
         },
         "avatar": {
-            "instanceID": 40364
+            "instanceID": 40372
         },
         "musicGenre": "dubstep",
         "characterIcon": {
-            "instanceID": 54264
+            "instanceID": 61836
         }
     },
     "itemList": [],

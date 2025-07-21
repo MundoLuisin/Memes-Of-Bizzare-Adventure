@@ -68542,6 +68542,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2b90236554e6f0b49b920c1b4576ea99, type: 3}
   - {fileID: 21300000, guid: 0ee4b68b06658eb42b2cf30329f4bc88, type: 3}
   - {fileID: 21300000, guid: a76cc638cc9e7fe4f9b721f3c8dda533, type: 3}
+  - {fileID: 21300000, guid: 5e9c8c02be7d7cd4895bf028b86fe8c6, type: 3}
   objectSpriteUpgradeItem:
   - {fileID: 21300000, guid: 4dff13dc7f630a54aa5c56c77fc9f7fb, type: 3}
   - {fileID: 21300000, guid: f08d81a4c7fabad45a2641c8a0c9afdc, type: 3}
@@ -69150,7 +69151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &6481279987230551914
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class JungleBossAI : MonoBehaviour
     GameObject target;
     public List<GameObject> targetsList = new List<GameObject>();
 
-    public ParticleSystem particleSystem;
+    public ParticleSystem particleSys;
     private AudioSource audioSource;
     public AudioClip audioClipStartAttack;
     public AudioClip audioClipFinishAttack;
@@ -98,7 +98,7 @@ public class JungleBossAI : MonoBehaviour
     IEnumerator Attack()
     {
         canAttack = false;
-        particleSystem.Play();
+        particleSys.Play();
         audioSource.PlayOneShot(audioClipStartAttack);
         yield return new WaitForSeconds(10f);
         audioSource.PlayOneShot(audioClipFinishAttack);

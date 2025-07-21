@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject CoreA;
     public GameObject CoreB;
 
+    public GameObject jungleMinionPrefab;
+    private GameObject[] jungleMinionInstances;
+
     [SerializeField] private GameObject[] FireWallsA;
     [SerializeField] private GameObject[] FireWallsB;
 
@@ -20,9 +23,22 @@ public class GameManager : MonoBehaviour
     Vector3 B_SpawnLocation = new Vector3(260, 2, -260);
     Vector3 Top_SpawnLocation = new Vector3(260, 2, 260);
     Vector3 Bottom_SpawnLocation = new Vector3(-260, 2, -260);
+    Vector3[] MinionJungle_SpawnLocations = 
+    {
+        new Vector3(-180, 0, -135),
+        new Vector3(-75, 0, -125),
+        new Vector3(65, 0, -200),
+        new Vector3(180, 0, 0),
+        new Vector3(25, 0, 175),
+        new Vector3(-45, 0, 165),
+        new Vector3(-65, 0, -200)
+    };
 
     bool spawnFlag = true;
     float raidTimer = 0f;
+
+    bool spawnJungleFlag = true;
+    float jungleTimer = 0f;
 
     [SerializeField] private GameObject shopPanel;
 
@@ -55,6 +71,8 @@ public class GameManager : MonoBehaviour
             turrets[i].GetComponent<TurretManager>().team = (i < 6) ? 'B' : 'A';
         }
 
+        jungleMinionInstances = new GameObject[MinionJungle_SpawnLocations.Length];
+
         CoreA.GetComponent<CoreManager>().team = 'A';
         CoreB.GetComponent<CoreManager>().team = 'B';
     }
@@ -65,10 +83,18 @@ public class GameManager : MonoBehaviour
         if (CoreB == null && !finish) Win('B');
 
         raidTimer += Time.deltaTime;
+        jungleTimer += Time.deltaTime;
+
         if (raidTimer >= 60f)
         {
             raidTimer = 0;
             spawnFlag = true;
+        }
+
+        if (jungleTimer >= 150f)
+        {
+            jungleTimer = 0;
+            spawnJungleFlag = true;
         }
 
         coinsText.text = GameData.Instance.coins.ToString();
@@ -114,6 +140,18 @@ public class GameManager : MonoBehaviour
             }
 
             spawnFlag = false;
+        }
+
+        if(spawnJungleFlag)
+        {
+            for (int i = 0; i < MinionJungle_SpawnLocations.Length; i++)
+            {
+                if (jungleMinionInstances[i] == null)
+                {
+                    jungleMinionInstances[i] = Instantiate(jungleMinionPrefab, MinionJungle_SpawnLocations[i], Quaternion.identity);
+                }
+            }
+            spawnJungleFlag = false;
         }
     }
 
@@ -179,6 +217,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 30)
         {
             playerController.damage += 3f;
+            GameData.Instance.coins -= 30;
         }
     }
 
@@ -187,6 +226,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 50)
         {
             playerController.health += 10f;
+            GameData.Instance.coins -= 50;
         }
     }
 
@@ -195,6 +235,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 45)
         {
             playerController.realAttackTimer -= 0.5f;
+            GameData.Instance.coins -= 45;
         }
     }
 
@@ -203,6 +244,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 25)
         {
             playerController.myNavMeshAgent.speed += 8f;
+            GameData.Instance.coins -= 25;
         }
     }
 
@@ -211,6 +253,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 35)
         {
             playerController.range += 2f;
+            GameData.Instance.coins -= 35;
         }
     }
 
@@ -219,6 +262,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 32)
         {
             playerController.myNavMeshAgent.acceleration += 5f;
+            GameData.Instance.coins -= 32;
         }
     }
 
@@ -227,6 +271,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 55)
         {
             playerController.characterSkill_3.cooldown -= 5;
+            GameData.Instance.coins -= 55;        
         }
     }
 
@@ -235,6 +280,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 60)
         {
             playerController.characterSkill_1.boost += 0.5f;
+            GameData.Instance.coins -= 60;
         }
     }
 
@@ -243,6 +289,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Instance.coins >= 39)
         {
             playerController.minionKillValue += 0.5f;
+            GameData.Instance.coins -= 39;
         }
     }
 }

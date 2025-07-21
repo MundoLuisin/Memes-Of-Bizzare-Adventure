@@ -10,7 +10,6 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-
     #region Essential
     public Camera mainCam;
     private GameObject characterModelInstance;
@@ -19,7 +18,8 @@ public class PlayerController : MonoBehaviour
     int layerTeam_B = 10;
     int layerPlayerTeam_A = 11;
     int layerPlayerTeam_B = 12;
-    int bossLayer = 15;
+    int jungleMinionLayer = 15;
+    int layerEnemyPlayer;
     int enemyLayer;
     int teamLayer;
     string playerName;
@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour
     #region Animations & Effects
     [HideInInspector] public Animator anim;
     [SerializeField] private GameObject punchEffectPrefab;
-    [SerializeField] private GameObject prefabSpellEffect;
     [SerializeField] private GameObject minionKillEffectPrefab;
     #endregion
 
@@ -105,6 +104,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Image cooldownImageSkill_1;
     [SerializeField] private Image cooldownImageSkill_2;
     [SerializeField] private Image cooldownImageSkill_3;
+    #endregion
+
+    #region Bots
+    [SerializeField] private GameObject playerBotPrefab;
     #endregion
     
     void Start()
@@ -138,26 +141,52 @@ public class PlayerController : MonoBehaviour
 
         myNavMeshAgent.enabled = false;
 
-        int coin = UnityEngine.Random.Range(0, 1); // This needs to be changed very important !! The Correct => Range(0, 2) 
+        int coin = UnityEngine.Random.Range(0, 2); 
         if (coin == 0)
         {
             playerTeam = 'A';
+            playerNameText.color = new Color(1f, 0.6f, 0.6f);
             this.gameObject.layer = layerPlayerTeam_A;
             enemyLayer = layerTeam_B;
+            layerEnemyPlayer = layerPlayerTeam_B;
             teamLayer = layerTeam_A;
             playerSpawnPosition = playerPositionTeamA;
             this.gameObject.transform.position = playerSpawnPosition;
             followComponent.FollowOffset = vCamOffsetTeamA;
+
+            for(int i = 0; i < 2; i++)
+            {
+                GameObject playerBot = Instantiate(playerBotPrefab);
+                playerBot.GetComponent<BotController>().Initialize('A');
+            }
+            for(int i = 0; i < 3; i++)
+            {
+                GameObject playerBot = Instantiate(playerBotPrefab);
+                playerBot.GetComponent<BotController>().Initialize('B');
+            }
         }
         else if(coin == 1)
         {
             playerTeam = 'B';
+            playerNameText.color = new Color(0.6f, 1f, 1f);
             this.gameObject.layer = layerPlayerTeam_B;
             enemyLayer = layerTeam_A;
+            layerEnemyPlayer = layerPlayerTeam_A;
             teamLayer = layerTeam_B;
             playerSpawnPosition = playerPositionTeamB;
             this.gameObject.transform.position = playerSpawnPosition;
-           followComponent.FollowOffset = vCamOffsetTeamB;
+            followComponent.FollowOffset = vCamOffsetTeamB;
+
+            for(int i = 0; i < 2; i++)
+            {
+                GameObject playerBot = Instantiate(playerBotPrefab);
+                playerBot.GetComponent<BotController>().Initialize('B');
+            }
+            for(int i = 0; i < 3; i++)
+            {
+                GameObject playerBot = Instantiate(playerBotPrefab);
+                playerBot.GetComponent<BotController>().Initialize('A');
+            }
         }
 
         myNavMeshAgent.enabled = true;
@@ -250,7 +279,7 @@ public class PlayerController : MonoBehaviour
                         hasTarget = false;
                     }
 
-                    if(hit.collider.gameObject.layer == enemyLayer || hit.collider.gameObject.layer == bossLayer)
+                    if(hit.collider.gameObject.layer == enemyLayer || hit.collider.gameObject.layer == jungleMinionLayer || hit.collider.gameObject.layer == layerEnemyPlayer)
                     {
                         target = hit.collider.gameObject;
                         hasTarget = true;
@@ -312,9 +341,19 @@ public class PlayerController : MonoBehaviour
                         } 
                     }
 
-                    if(target.TryGetComponent<JungleBossAI>(out JungleBossAI strawberryElephant))
+                    if(target.TryGetComponent<BotController>(out BotController enemyBotPlayer))
                     {
-                        strawberryElephant.health -= damage;
+                        enemyBotPlayer.health -= damage;
+                    }
+
+                    if(target.TryGetComponent<JungleBossAI>(out JungleBossAI jungleBoss))
+                    {
+                        jungleBoss.health -= damage;
+                    }
+
+                    if(target.TryGetComponent<MinionJungleAi>(out MinionJungleAi minionJungle))
+                    {
+                        minionJungle.health -= damage;
                     }
 
                     if(target.TryGetComponent<TurretManager>(out TurretManager turret))
@@ -398,20 +437,6 @@ public class PlayerController : MonoBehaviour
     public void Skill_3()
     {
         characterSkill_3.Consume(this);
-       /* if (!isOnCooldownSkill3 && hasTarget)
-        {
-            isOnCooldownSkill3 = true;
-            cooldownTimerSkill3 = cooldownTimeSkill3;
-            myNavMeshAgent.enabled = false;
-            anim.SetTrigger("Spell");
-            Vector3 effectPosition = new Vector3(this.transform.position.x, 0.5f, this.transform.position.z);
-            GameObject spellEffect = Instantiate(prefabSpellEffect, effectPosition, Quaternion.identity);
-            spellEffect.transform.SetParent(this.transform, true);
-            spellEffect.transform.localScale = Vector3.one;
-            damage += 200; // Parchear el como la skill hace daño en un futuro porque esto esta mal hecho hahahaha 
-            audioSource.PlayOneShot(audioClipMagic);
-            Destroy(spellEffect, 8f);
-        }*/
     }
 
     public IEnumerator Cooldown(Skill skill)

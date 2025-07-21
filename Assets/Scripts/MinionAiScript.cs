@@ -47,14 +47,13 @@ public class MinionAiScript : MonoBehaviour
             return;
         }
 
-        if ((target.TryGetComponent<MinionAiScript>(out var m) && m.health <= 0) || (target.TryGetComponent<PlayerController>(out var p) && (p.health <= 0 || p.isDead)) || (target.TryGetComponent<TurretManager>(out var t) && (t.health <= 0)) || (target.TryGetComponent<CoreManager>(out var c) && c.health <= 0))
+        if ((target.TryGetComponent<MinionAiScript>(out var m) && m.health <= 0) || (target.TryGetComponent<PlayerController>(out var p) && (p.health <= 0 || p.isDead))  || (target.TryGetComponent<BotController>(out var pb) && (pb.health <= 0 || pb.isDead)) || (target.TryGetComponent<TurretManager>(out var t) && (t.health <= 0)) || (target.TryGetComponent<CoreManager>(out var c) && c.health <= 0))
         {
             hasTarget = false;
             target = null;
             agent.SetDestination(passedHalfway ? finalDestination : destination);
             return;
         }
-
 
     // Attack
     if(hasTarget && target != null)
@@ -79,6 +78,13 @@ public class MinionAiScript : MonoBehaviour
                     playerTargetScript.health -= 10;
                 }
             }
+            if(target.TryGetComponent(out BotController botPlayerTargetScript))
+            {
+                if(botPlayerTargetScript.health > 0 && !botPlayerTargetScript.isDead && !botPlayerTargetScript.immunity) 
+                {
+                    botPlayerTargetScript.health -= 10;
+                }
+            }
             if(target.TryGetComponent(out TurretManager TurretTargetScript))
             {
                 if(TurretTargetScript.health > 0) 
@@ -100,13 +106,13 @@ public class MinionAiScript : MonoBehaviour
 
 
         // Top Lane
-        if(this.transform.position.x >= 260 && this.transform.position.z >= 260)
+        if(Vector3.Distance(this.transform.position, new Vector3(260, 0, 260)) <= 10f)
         {
             agent.SetDestination(finalDestination);
             passedHalfway = true;
         }
         // Bot Lane
-        if(this.transform.position.x <= -260 && this.transform.position.z <= -260)
+        if(Vector3.Distance(this.transform.position, new Vector3(-260, 0, -260)) <= 10f)
         {
             agent.SetDestination(finalDestination);
             passedHalfway = true;

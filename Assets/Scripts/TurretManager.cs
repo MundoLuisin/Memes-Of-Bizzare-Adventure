@@ -78,11 +78,23 @@ public class TurretManager : MonoBehaviour
                     Destroy(lightningBoltReference, 1.5f);
                 }
             }
-            else if (target.TryGetComponent(out PlayerController playerTargetScript))
+
+            if (target.TryGetComponent(out PlayerController playerTargetScript))
             {
                 if (playerTargetScript.health > 0 && !playerTargetScript.isDead && !playerTargetScript.immunity)
                 {
                     playerTargetScript.health -= 20;
+                    audioSource.PlayOneShot(audioClipElectricShock);
+                    GameObject lightningBoltReference = Instantiate(lightningBoltPrefab, target.transform.position, Quaternion.identity);
+                    Destroy(lightningBoltReference, 1.5f);
+                }
+            }
+            
+            if (target.TryGetComponent(out BotController playerBotTargetScript))
+            {
+                if (playerBotTargetScript.health > 0 && !playerBotTargetScript.isDead && !playerBotTargetScript.immunity)
+                {
+                    playerBotTargetScript.health -= 20;
                     audioSource.PlayOneShot(audioClipElectricShock);
                     GameObject lightningBoltReference = Instantiate(lightningBoltPrefab, target.transform.position, Quaternion.identity);
                     Destroy(lightningBoltReference, 1.5f);
